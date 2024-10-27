@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,6 +16,8 @@ import {
   Radio,
   Trophy,
   Drama,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import links from './data/links.json';
 
@@ -33,6 +35,7 @@ const categoryIcons: { [key: string]: any } = {
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('all');
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const filteredLinks = links
     .map((category) => ({
@@ -54,6 +57,16 @@ export default function Home() {
     activeTab === 'all'
       ? filteredLinks
       : filteredLinks.filter((category) => category.category === activeTab);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 200; // Adjust this value as needed
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background">
@@ -78,19 +91,39 @@ export default function Home() {
         </Card>
 
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <ScrollArea className="w-full whitespace-nowrap rounded-md border">
-            <TabsList className="w-full justify-start">
-              {categories.map((category) => (
-                <TabsTrigger
-                  key={category}
-                  value={category}
-                  className="px-4 py-2 capitalize"
-                >
-                  {category}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </ScrollArea>
+          <div className="relative">
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
+              onClick={() => scroll('left')}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <ScrollArea className="w-full">
+              <div ref={scrollRef} className="flex overflow-x-auto">
+                <TabsList className="inline-flex w-max px-4">
+                  {categories.map((category) => (
+                    <TabsTrigger
+                      key={category}
+                      value={category}
+                      className="px-4 py-2 capitalize whitespace-nowrap"
+                    >
+                      {category}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
+            </ScrollArea>
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10"
+              onClick={() => scroll('right')}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
 
           <TabsContent value={activeTab} className="mt-6">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
