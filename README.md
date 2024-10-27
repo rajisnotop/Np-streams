@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# NP_streams
+Streaming 
+=======
 
 Disclaimer and Copyright Notice
 
@@ -14,3 +18,4 @@ Be sure to include your full name, contact information, and any other details ne
 Once a valid DMCA takedown notice is received, we will promptly review the request and take appropriate action as required by law.
 
 Thank you for your understanding and cooperation in maintaining a responsible and compliant online environment.
+>>>>>>> 2ed49c6f (first commit)
