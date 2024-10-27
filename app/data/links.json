@@ -1,0 +1,84 @@
+[
+  {
+    "category": "Movie Streaming",
+    "links": [
+      {"name": "VidBinge", "url": "https://www.vidbinge.com/"},
+      {"name": "RiveStream", "url": "https://rivestream.live/"},
+      {"name": "NovaFork", "url": "https://novafork.com/"},
+      {"name": "PopcornMovies", "url": "https://www.popcornmovies.to/"},
+      {"name": "PrimeFlix", "url": "https://primeflix-web.vercel.app/"},
+      {"name": "AutoEmbed", "url": "https://watch.autoembed.cc/"},
+      {"name": "Braflix", "url": "https://www.braflix.is/"},
+      {"name": "FMovies247", "url": "https://fmovies247.net/"},
+      {"name": "DesiCinemas (Indian/Bollywood)", "url": "https://desicinemas.tv/"}
+    ]
+  },
+  {
+    "category": "Anime Streaming",
+    "links": [
+      {"name": "MiruRo", "url": "https://www.miruro.tv/"},
+      {"name": "HiAnime", "url": "https://hianime.to/"},
+      {"name": "KickassAnimes", "url": "https://kickassanimes.io/"},
+      {"name": "Anix", "url": "https://anix.com.co/"},
+      {"name": "GogoAnime", "url": "https://gogoanime3.co/"}
+    ]
+  },
+  {
+    "category": "Manga/Manhwa/Manhua",
+    "links": [
+      {"name": "Comick", "url": "https://comick.io"},
+      {"name": "MangaFire", "url": "https://mangafire.to"},
+      {"name": "MangaReader", "url": "https://mangareader.to"},
+      {"name": "MangaDex", "url": "https://mangadex.org/"},
+      {"name": "AsuraComic", "url": "https://asuracomic.net/"},
+      {"name": "Freek", "url": "https://freek.to/explore/anime"}
+    ]
+  },
+  {
+    "category": "Live TV",
+    "links": [
+      {"name": "Easy Web TV", "url": "https://zhangboheng.github.io/Easy-Web-TV-M3u8/catalogues/counplay.html?tab=np&title=Nepal"},
+      {"name": "TheTVApp", "url": "https://thetvapp.to/"},
+      {"name": "TheDaddy", "url": "https://thedaddy.to/"}
+    ]
+  },
+  {
+    "category": "Live Sports",
+    "links": [
+      {"name": "Streamed", "url": "https://streamed.su/"},
+      {"name": "SportPlus", "url": "https://en12.sportplus.live/"},
+      {"name": "TotalSportek", "url": "https://totalsportek.pro/"},
+      {"name": "SportsHub", "url": "https://sportshub.stream/"},
+      {"name": "LoneLil TV", "url": "https://watch.lonelil.ru/tv"}
+    ]
+  },
+  {
+    "category": "Dramas",
+    "links": [
+      {"name": "AsianC", "url": "https://asianc.sh/"},
+      {"name": "KissAsian", "url": "https://ww4.kissasian.video/drama-list.html"},
+      {"name": "GoPlay", "url": "https://goplay.su/"},
+      {"name": "KissKH", "url": "https://kisskh.co/"},
+      {"name": "DramaFull", "url": "https://dramafull.net/"}
+    ]
+  },
+  {
+    "category": "Books",
+    "links": [
+      {"name": "Anna's Archive", "url": "https://annas-archive.org/"},
+      {"name": "Z-Library", "url": "https://z-lib.gs/"},
+      {"name": "Bookracy", "url": "https://bookracy.ru/"},
+      {"name": "Free Banned Books", "url": "https://freebannedbooks.org/"},
+      {"name": "Liber3", "url": "https://liber3.eth.limo/"}
+    ]
+  },
+  {
+    "category": "Games",
+    "links": [
+      {"name": "Dodi Repacks", "url": "https://dodi-repacks.site/"},
+      {"name": "FitGirl Repacks", "url": "https://fitgirl-repacks.site/"},
+      {"name": "KaosKrew", "url": "https://www.kaoskrew.org/"},
+      {"name": "GetFreeGames", "url": "https://getfreegames.net/"}
+    ]
+  }
+]
