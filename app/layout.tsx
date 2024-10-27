@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Link Hub - Your Gateway to Entertainment',
+  title: 'NP Streams - Your Gateway to Entertainment',
   description: 'A curated collection of entertainment links organized by category',
 };
 

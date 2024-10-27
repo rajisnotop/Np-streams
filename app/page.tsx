@@ -47,7 +47,7 @@ export default function Home() {
 
   const categories = [
     'all',
-    ...new Set(links.map((category) => category.category)),
+    ...Array.from(new Set(links.map((category) => category.category))),
   ];
 
   const displayLinks =
