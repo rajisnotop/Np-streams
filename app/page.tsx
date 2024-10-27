@@ -92,37 +92,35 @@ export default function Home() {
 
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <div className="relative">
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
-              onClick={() => scroll('left')}
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <ScrollArea className="w-full">
-              <div ref={scrollRef} className="flex overflow-x-auto">
-                <TabsList className="inline-flex w-max px-4">
-                  {categories.map((category) => (
-                    <TabsTrigger
-                      key={category}
-                      value={category}
-                      className="px-4 py-2 capitalize whitespace-nowrap"
-                    >
-                      {category}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
-              </div>
-            </ScrollArea>
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10"
-              onClick={() => scroll('right')}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
+            {/* Mobile view */}
+            <div className="md:hidden overflow-x-auto">
+              <TabsList className="inline-flex w-max">
+                {categories.map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    className="px-4 py-2 capitalize whitespace-nowrap"
+                  >
+                    {category}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+
+            {/* Desktop view */}
+            <div className="hidden md:block">
+              <TabsList className="flex justify-between w-full">
+                {categories.map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    className="px-4 py-2 capitalize"
+                  >
+                    {category}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
           </div>
 
           <TabsContent value={activeTab} className="mt-6">
